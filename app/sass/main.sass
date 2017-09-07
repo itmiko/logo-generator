@@ -3,68 +3,445 @@
 @import "vars"
 
 *
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
 *::-webkit-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *::-moz-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
-	opacity: 1
+  color: #666
+  opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: #666
+  color: #666
 body input:required:valid,
 body textarea:required:valid
-	color: #666
+  color: #666
 
 html, body
-	height: 100%
-	margin: 0
-	padding: 0
+  height: 100%
+  margin: 0
+  padding: 0
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.75
-	font-family: $default-font
-	overflow-x: hidden
-	opacity: 1
-
-// .img-responsive
-// 	display: block
-// 	max-width: 100%
-// 	height: auto
+  font-family: $default-font
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.75
+  font-family: $default-font
+  overflow-x: hidden
+  opacity: 1
 
 ol, ul
-	list-style-type: none
+  list-style-type: none
 
 a, a:hover
-	text-decoration: none
+  text-decoration: none
 
 *
-	margin: 0
-	padding: 0
+  margin: 0
+  padding: 0
+
+section
+  position: relative
+
 
 //*****HEADER*****//
+.container
+  width: 1160px
+  margin: 0 auto
+  position: relative
+header
+  position: absolute
+  top: 34px
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 2
+  .logo
+    float: left
+    height: 30px
+  #nav-menu
+    float: right
+    li
+      float: left
+      margin-right: 25px
+      font-size: 15px
+    a
+      color: $grey
+      transition: all .5s ease
+      font-family: $default-font
+      &:hover
+        transition: all .5s ease
+        color: $blue
 
+//*****SECTION Main-Head*****//
+.main-head
+  height: 712px
+  text-align: center
+  background-size: cover
+  h1
+    padding-top: 243px
+    left: 330px
+    font-size: 44px
+    line-height: 50px
+    color: $black-second
+    font-family: $droidSansReg
+  img 
+    position: absolute
+    top: 184px
+    left: 245px
+    height: 91px
+  #make-block-form
+    margin: 0 auto
+    margin-top: 90px
+    width: 551px
+    height: 60px
+    border: $light-grey solid 1px
+    border-radius: 3px
+    .form-item
+      padding: 18px 0 0 23px
+      float: left
+    input
+      padding: 0
+      margin: 0
+      display: block
+      border: none
+      outline: none
+      background: none
+      width: 100%
+      height: 100%
+      font-size: 19px
+      &::-webkit-input-placeholder
+        font-family: $default-font
+        color: $light-third
+    .form-actions
+      border-radius: 3px
+      width: 180px
+      height: 60px
+      float: right
+      margin: -1px -1px 0 0
+      background-color: $blue
+      transition: all .5s ease
+      -webkit-box-shadow: 0px 7px 42px  rgba(127,0,0,0.3)
+      -moz-box-shadow: 0px 7px 42px  rgba(127,0,0,0.35)
+      box-shadow: 0px 7px 42px  rgba(127,0,0,0.3)
+      &:hover
+        background-color: $black-first
+        transition: all .5s ease
+      input
+        overflow: hidden
+        font-size: 15px
+        color: $white
+        &:hover
+          cursor: pointer
+
+//*****SECTION COOKIES*****//
+.cookies
+  min-height: 580px
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  &:before
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-bottom: 160px solid $white 
+    border-left: 1440px solid transparent
+  &:after
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(to left, $white , transparent)
+  .big-square
+    position: absolute
+    left: 252px
+    top: 40px
+    height: 516px
+    z-index: 2
+  .small-square-one,
+  .small-square-two,
+  .small-square-three
+    position: absolute
+    left: 128px
+    top: 134px
+    height: 142px
+    z-index: 2
+  .small-square-two
+    left: -38px
+    top: 215px
+  .small-square-three
+    left: 128px
+    top: 300px
+  .counter
+    position: absolute
+    left: 880px
+    top: 204px
+    z-index: 2
+    span
+      font-family: $HelveticaNeueReg
+      font-size: 76px
+      color: $black-third
+    span:nth-child(2)
+      display: block
+      text-align: center
+      font-family: $PoppinsMed
+      font-size: 14px
+      color: $black-third
+
+//*****SECTION Rating*****//
+.rating
+  padding-top: 50px
+  .stars-rating,
+  .testimonial-bg
+    display: block
+    margin: 0 auto
+  .testimonial-bg
+    margin-top: 100px
+  .feedback
+    position: relative
+    width: 707px
+    height: 259px
+    margin: 0 auto
+    p.feed
+      position: absolute
+      top: 70px
+      left: 47px
+      font-size: 19px
+      color: $blue
+      font-family: $default-font
+    p
+      position: absolute
+      top: 184px
+      left: 47px
+      font-family: $openSansSB
+      font-size: 19px
+
+//*****SECTION steps*****//
+.steps
+  padding-top: 90px
+  text-align: center
+  margin: 0 auto
+  h1
+    font-size: 44px
+    color: $black-second
+    font-family: $droidSansReg
+  p
+    padding-top: 40px
+    font-size: 19px
+    color: $grey-medium
+  .steps-pictures
+    display: inline-block
+    padding-top: 90px
+    margin: 0 auto
+    width: 775px
+    text-align: center
+    .pictures
+      height: 156px
+      float: left
+      width: 33.333333333%
+      position: relative
+      &:nth-child(1)
+        text-align: left
+        display: block
+        padding-top: 20px
+      &:nth-child(2)
+        display: block
+        text-align: center
+      &:nth-child(3)
+        display: block
+        text-align: right
+        padding-top: 14px
+        img
+          margin-right: 14px
+      span
+        position: absolute
+        bottom: 0
+        display: block
+        font-size: 14px
+        font-family: $default-font
+        color: $grey-medium
+      &:nth-child(2)
+        padding-left: 60px
+      &:nth-child(3)
+        padding-left: 120px
+.button
+  border-radius: 3px
+  width: 240px
+  height: 60px
+  background-color: $blue
+  margin: 0 auto
+  margin-top: 120px
+  transition: all .5s ease
+  -webkit-box-shadow: 0px 7px 42px  rgba(127,0,0,0.3)
+  -moz-box-shadow: 0px 7px 42px  rgba(127,0,0,0.35)
+  box-shadow: 0px 7px 42px  rgba(127,0,0,0.3)
+  &:hover
+    background-color: $black-first
+    transition: all .5s ease
+  a
+    display: block
+    color: $white
+    text-transform: uppercase
+    font-size: 15px
+    vertical-align: middle
+    line-height: 58px
+
+//*****SECTION Prices*****//
+.prices
+  margin-top: 150px
+  height: 602px
+  background: $grey-third
+  text-align: center
+  .container
+    display: imline-block
+    width: 725px
+    img
+      position: absolute
+      top: 580px
+      right: -70px
+      height: 91px
+  &:before
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-bottom: 122px solid $white 
+    border-right: 1440px solid transparent
+  &-item-one,
+  &-item-two
+    -webkit-box-shadow: 0px 7px 42px  rgba(127,0,0,0.2)
+    -moz-box-shadow: 0px 7px 42px  rgba(127,0,0,0.2)
+    box-shadow: 0px 7px 42px  rgba(127,0,0,0.2)
+    margin-top: 40px  
+    border-radius: 3px
+    &:hover,
+    &:hover .button-two
+      border: 1px solid $blue
+
+    &:hover .button-two a
+      color: $blue
+    span
+      display: block
+      font-size: 14px
+      color: $grey-one
+      margin-top: 41px
+    span.price
+      font-size: 67px
+      margin-top: 0px
+      color: $black-second
+      font-family: $HelveticaNeueReg
+    .descr
+      margin-top: 30px
+      span
+        margin: 0
+        line-height: 36px
+        font-size: 19px
+        color: $grey-medium
+  &-item-one
+    float: left
+    display: inline-block
+    height: 454px
+    width: 327px
+    background: $white
+    margin-right: 71px
+    text-align: center
+  &-item-two
+    float: left
+    display: inline-block
+    height: 570px
+    background: white
+    width: 327px
+    text-align: center
+  .button-two
+    border-radius: 3px
+    width: 202px
+    height: 60px
+    background-color: $white
+    margin: 0 auto
+    margin-top: 50px
+    border: 1px solid $light-grey
+    transition: all .5s ease
+    a
+      display: block
+      color: $black-third
+      font-size: 15px
+      line-height: 58px
+
+//*****SECTION make-logo*****//
+.make-logo
+  text-align: center
+  h1
+    display: inline-block
+    margin-top: 90px
+    font-size: 44px
+    font-family: $droidSansReg
+    color: $black-second
+  .button
+    margin-top: 40px
+
+//*****FOOTER*****//
+footer
+  margin-top: 100px
+  background-color: $black-first
+  height: 265px
+  font-size: 14px
+  .footer-left
+    width: 50%
+    float: left
+    padding-top: 58px
+    .logo
+    p
+      line-height: 20px
+      color: $grey-medium
+      margin-top: 24px
+    span.reserved
+      display: inline-block
+      margin-top: 28px
+      color: $grey-second
+  .footer-right
+    margin-left: 40px
+    float: left
+    padding-top: 58px
+    &-item
+      float: left
+      width: 150px
+      margin-right: 64px
+      a
+        color: $grey-second
+        line-height: 30px
+        transition: all .5s ease
+        &:hover
+          transition: all .5s ease
+          color: $blue
+    &-item:last-child
+      margin-right: 0
+      width: 100px
 
 
 
